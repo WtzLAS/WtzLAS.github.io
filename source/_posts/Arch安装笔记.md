@@ -74,6 +74,8 @@ Linux下使用dd写入。
 # mount /dev/esp /mnt/boot
 ```
 
+如果与Windows装双系统，请务必先安装Windows，然后将Windows建立的ESP直接挂载到`/mnt/boot`，不可再次格式化。
+
 ## btrfs subvolume创建和挂载
 
 btrfs subvolume的详细定义可参考[btrfs wiki中的说明](https://btrfs.wiki.kernel.org/index.php/SysadminGuide#Subvolumes)。
@@ -186,14 +188,17 @@ pacstrap /mnt base base-devel linux-zen linux-zen-headers linux-firmware btrfs-p
 
 这里只配置了DHCP网络需要的内容，特殊需求请自行查阅ArchWiki。
 
+`20-wired.network`加入以下内容：
+
 ```
-# 20-wired.network
 [Match]
 Name=en*
 
 [Network]
 DHCP=yes
 ```
+
+`25-wireless.network`加入以下内容：
 
 ```
 # 25-wireless.network
@@ -308,7 +313,7 @@ DHCP=yes
 | dolphin   | Explorer                   |
 | vlc       | PotPlayer                  |
 | flameshot | Snipaste                   |
-| gwenview  | Acdsee(?)                  |
+| gwenview  | AcdSee(?)                  |
 | kcalc     | Calc, but MUCH MORE shabby |
 | kate      | Notepad, but more advanced |
 | konsole   | cmd                        |
@@ -324,6 +329,8 @@ DHCP=yes
 ```
 # systemctl enable sddm
 ```
+
+# 进阶设置
 
 ## 安装输入法
 
@@ -342,7 +349,7 @@ XMODIFIERS=@im=fcitx
 SDL_IM_MODULE=fcitx
 ```
 
-## AUR
+## AUR Helper
 
 我是Rust铁粉所以我用paru。
 
@@ -350,6 +357,89 @@ SDL_IM_MODULE=fcitx
 # git clone https://aur.archlinux.org/paru.git
 # cd paru
 # makepkg -si
+# cd ..
+# rm -rf paru
+```
+
+从此之后就可以丢掉pacman了。（雾）
+
+## 音频设置
+
+[pipewire](https://pipewire.org/)是最新一代的Linux音频技术，用就完事了！
+
+```
+# paru -S pipewire pipewire-pulse pipewire-jack pipewire-alsa gst-plugin-pipewire
+```
+
+有冲突包一律卸载，pipewire会接替这些包的位置。
+
+## 科学上网
+
+我使用xray + qv2ray的方案进行科学上网。
+
+```
+# paru -S xray qv2ray-dev-git proxychains
+```
+
+修改`/etc/proxychains.conf`，取消`quiet_mode`的注释，然后修改最后一行的代理地址。
+
+## fcitx5皮肤
+
+```
+# paru -S fcitx5-breeze
+```
+
+接着在fcitx5的配置工具中切换皮肤。
+
+## 配置zsh
+
+为了让zsh更好看更好用，oh-my-zsh是必需的啦~
+
+先安装一个Nerd Font字体以支持奇怪符号。
+
+```
+# paru -S nerd-fonts-meslo
+```
+
+然后修改konsole配置使用MesloLGS Nerd Font Mono字体。
+
+这里使用antigen来做zsh的包管理。
+
+```
+# paru -S antigen
+```
+
+修改`~/.zshrc`，加入以下内容：
+
+```
+source /usr/share/zsh/share/antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen bundle sudo
+antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+
+antigen theme romkatv/powerlevel10k
+
+antigen apply
+```
+
+随后：
+
+```
+# proxychains zsh
+```
+
+然后你的zsh就有炫酷的语法高亮、自动建议和prompt啦~
+
+## 本地化（第二部分）
+
+如果你发现本地化还有问题，请先在KDE的系统设置里设置，然后执行：
+
+```
+sudo localectl set-locale LANG=zh_CN.UTF-8
 ```
 
 # 尾声
