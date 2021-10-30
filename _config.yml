@@ -8,7 +8,7 @@ subtitle: "A normal person's normal blog"
 description: ''
 keywords:
 author: Wtz_LASR
-language: zh
+language: zh-CN
 timezone: ''
 
 # URL
@@ -104,13 +104,6 @@ theme: next
 deploy:
   type: ''
 
-githubEmojis:
-  enable: true
-  className: github-emoji
-  inject: true
-  styles:
-  customEmojis:
-
 asset_pipeline:
   revisioning:
     enable: true
@@ -122,3 +115,31 @@ asset_pipeline:
     enable: true
   html_minifier:
     enable: true
+
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-texmath
+    - markdown-it-emoji
+
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+  awl: 4
+  wpm: 275
+  suffix: "mins."
