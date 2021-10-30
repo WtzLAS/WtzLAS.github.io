@@ -104,14 +104,6 @@ theme: next
 deploy:
   type: ''
 
-minify:
-  js:
-    enable: true
-  css:
-    enable: true
-  html:
-    enable: true
-
 githubEmojis:
   enable: true
   className: github-emoji
