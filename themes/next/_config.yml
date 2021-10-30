@@ -177,7 +177,7 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  #GitHub: https://github.com/yourname || fab fa-github
+  GitHub: https://github.com/WtzLAS || fab fa-github
   #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
@@ -357,11 +357,11 @@ codeblock:
   highlight_theme: normal
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Show text copy result.
-    show_result: false
+    show_result: true
     # Available values: default | flat | mac
-    style:
+    style: default
 
 back2top:
   enable: true
@@ -372,7 +372,7 @@ back2top:
 
 # Reading progress bar
 reading_progress:
-  enable: false
+  enable: true
   # Available values: top | bottom
   position: top
   color: "#37c6c0"
@@ -728,13 +728,13 @@ busuanzi_count:
 # Algolia Search
 # For more information: https://www.algolia.com
 algolia_search:
-  enable: false
+  enable: true
   hits:
     per_page: 10
   labels:
-    input_placeholder: Search for Posts
-    hits_empty: "We didn't find any results for the search: ${query}"
-    hits_stats: "${hits} results found in ${time} ms"
+    input_placeholder: "搜索博文"
+    hits_empty: "我们从 ${query} 中未找到任何结果"
+    hits_stats: "在 ${time} 毫秒内找到 ${hits} 个结果"
 
 # Local Search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
@@ -788,7 +788,7 @@ note:
   #  - modern    bs-callout new (v2-v3) alert style.
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
-  style: simple
+  style: modern
   icons: false
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
   # Offset also applied to label tag variables. This option can work with disabled note tag.
