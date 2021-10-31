@@ -47,6 +47,10 @@ Linux下使用dd写入。
 # reflector -c china -f 5 --sort score --save /etc/pacman.d/mirrorlist
 ```
 
+## 设置pacman
+
+修改`/etc/pacman.conf`，取消`Color`和`ParallelDownload=5`前的注释，这样你的pacman就有色彩和并行下载了。
+
 ## 更新时钟
 
 没啥好说的，更就完事了。
@@ -70,8 +74,6 @@ Linux下使用dd写入。
 # mkfs.fat -F 32 /dev/esp
 # mkfs.btrfs /dev/root_part
 # mount /dev/root_part /mnt
-# mkdir /mnt/boot
-# mount /dev/esp /mnt/boot
 ```
 
 如果与Windows装双系统，请务必先安装Windows，然后将Windows建立的ESP直接挂载到`/mnt/boot`，不可再次格式化。
@@ -94,6 +96,8 @@ btrfs subvolume的详细定义可参考[btrfs wiki中的说明](https://btrfs.wi
 # mount /dev/root_part /mnt/var -o subvol=@var,autodefrag,discard=async,compress=none,space_cache,ssd,noatime
 # mkdir /mnt/swap
 # mount /dev/root_part /mnt/swap -o subvol=@swap,compress=none,space_cache,ssd,noatime
+# mkdir /mnt/boot
+# mount /dev/esp /mnt/boot
 ```
 
 ## 建立swapfile
@@ -201,13 +205,14 @@ DHCP=yes
 `25-wireless.network`加入以下内容：
 
 ```
-# 25-wireless.network
 [Match]
 Name=wlan*
 
 [Network]
 DHCP=yes
 ```
+
+随后执行：
 
 ```
 # systemctl enable iwd
@@ -277,9 +282,17 @@ DHCP=yes
 # passwd <USERNAME>
 ```
 
+## 设置sudoer
+
+```
+EDITOR=nano visudo
+```
+
+使用vim的请换成`EDTIOR=vim`。
+
 # 安装图形化界面
 
-最后一步啦~:raised_hands:
+马上就是最后一步啦~:raised_hands:
 
 鉴于GNOME对Fractional Scaling的支持非常难以言喻，HiDPI屏幕可以战略性放弃GNOME了。
 
@@ -295,12 +308,12 @@ DHCP=yes
 # sudo pacman -S xf86-video-amdgpu nvidia-dkms libva-mesa-driver mesa-vdpau
 ```
 
-## 安装中文字体
+## 安装字体
 
 起码得有个能顶顶的。
 
 ```
-# sudo pacman -S noto-fonts-cjk
+# sudo pacman -S noto-fonts-cjk noto-fonts-emoji
 ```
 
 ## 安装KDE和部分应用
