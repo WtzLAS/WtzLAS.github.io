@@ -25,6 +25,6 @@
     "hexo-theme-next": "^8.8.0",
     "hexo-word-counter": "^0.0.3",
     "katex": "^0.13.23",
-    "markdown-it-texmath": "^0.9.3"
+    "markdown-it-texmath": "^0.9.6"
   }
 }
