@@ -245,6 +245,8 @@ DHCP=yes
 
 修改`/etc/default/grub`，添加`GRUB_DISABLE_OS_PROBER=false`来启动grub的os-prober功能。
 
+将原有的默认内核参数清空，并填入`acpi_backlight=vendor`来解决部分笔记本屏幕亮度保存失败的问题，有动手能力者可以尝试[clight](https://github.com/FedeDP/Clight)。
+
 没人会想去手写grub的配置文件的。:cry:
 
 ```
