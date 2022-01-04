@@ -171,7 +171,7 @@ pacstrap /mnt base base-devel linux-zen linux-zen-headers linux-firmware btrfs-p
 
 ## 本地化
 
-修改`/etc/locale.conf` ，取消`en_US.UTF-8 UTF-8`和`zh_CN.UTF-8 UTF-8`的注释。
+修改`/etc/locale.gen` ，取消`en_US.UTF-8 UTF-8`和`zh_CN.UTF-8 UTF-8`的注释。
 
 然后运行locale-gen，设置成英文（推荐在安装图形界面之前使用英文）。
 
@@ -231,14 +231,14 @@ DHCP=yes
 
 下面这俩安一个就行了。
 
-除非...:thinking:
-
-你有一台同时安装AMD CPU和Intel CPU的电脑？！
-
-（可移动介质安装除外，这俩你都得装。）
+（可移动介质安装除外，这俩都得装。）
 
 ```
-# pacman -S amd-ucode intel-ucode
+# pacman -S amd-ucode
+```
+或者
+```
+# pacman -S intel-ucode
 ```
 
 ## 设置引导
@@ -334,7 +334,13 @@ EDITOR=nano visudo
 | yakuake   | Y Y D S                    |
 
 ```
-# sudo pacman -S plasma-meta ark audiocd-kio dolphin dolphin-plugins vlc flameshot filelight gwenview kalarm kcalc kate kcolorchooser kcron kdeconnect kdegraphics-thumbnailers kdenetwork-filesharing kdepim-addons kdesdk-kioslaves kdesdk-thumbnailers kdf kdialog kfind kio-extras kio-gdrive kipi-plugins kmag kmousetool konsole korganizer krfb ksystemlog kwalletmanager okular partitionmanager pim-data-exporter pim-sieve-editor print-manager signon-kwallet-extension yakuake zeroconf-ioslave
+# sudo pacman -S plasma-meta ark audiocd-kio dolphin dolphin-plugins vlc
+flameshot filelight gwenview kalarm kcalc kate kcolorchooser kcron kdeconnect
+kdegraphics-thumbnailers kdenetwork-filesharing kdepim-addons kdesdk-kioslaves
+kdesdk-thumbnailers kdf kdialog kfind kio-extras kio-gdrive kipi-plugins kmag
+kmousetool konsole korganizer krfb ksystemlog kwalletmanager okular partitionmanager
+pim-data-exporter pim-sieve-editor print-manager signon-kwallet-extension yakuake
+zeroconf-ioslave
 ```
 
 ## 配置SDDM
@@ -430,7 +436,7 @@ source /usr/share/zsh/share/antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundle sudo
-antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle zdharma-continuum/fast-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 
