@@ -24,7 +24,7 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-next": "^8.10.1",
     "hexo-word-counter": "^0.0.3",
-    "katex": "^0.15.1",
+    "katex": "^0.15.2",
     "markdown-it-texmath": "^0.9.7"
   }
 }
