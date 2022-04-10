@@ -17,10 +17,10 @@ tags:
 
 下载完成后，Windows下用[Rufus](https://rufus.ie/)刻录到U盘中。
 
-Linux下使用dd写入。
+Linux下使用cp或者cat写入。
 
 ```
-# dd bs=4M if=path/to/archlinux-version-x86_64.iso of=/dev/sdx conv=fsync oflag=direct status=progress
+# cp path/to/archlinux-version-x86_64.iso /dev/sdx
 ```
 
 然后启动到ArchISO环境即可。
@@ -65,7 +65,7 @@ Linux下使用dd写入。
 
 | 挂载点                        | 分区             | 分区类型                                                     | 文件系统类型 | 建议大小 |
 | ----------------------------- | ---------------- | ------------------------------------------------------------ | ------------ | :------- |
-| `/mnt/boot`                   | `/dev/esp`       | [EFI system partition](https://en.wikipedia.org/wiki/EFI_system_partition) | FAT32        | 512MiB   |
+| `/mnt/efi`                   | `/dev/esp`       | [EFI system partition](https://en.wikipedia.org/wiki/EFI_system_partition) | FAT32        | 512MiB   |
 | `/mnt`,`/mnt/swap`,`/mnt/var` | `/dev/root_part` | Linux filesystem                                             | btrfs        | 剩余空间 |
 
 随后进行格式化和初步挂载：
@@ -76,7 +76,7 @@ Linux下使用dd写入。
 # mount /dev/root_part /mnt
 ```
 
-如果与Windows装双系统，请务必先安装Windows，然后将Windows建立的ESP直接挂载到`/mnt/boot`，不可再次格式化。
+如果与Windows装双系统，请务必先安装Windows，然后将Windows建立的ESP直接挂载到`/mnt/efi`，不可再次格式化。
 
 ## btrfs subvolume创建和挂载
 
@@ -200,6 +200,12 @@ Name=en*
 
 [Network]
 DHCP=yes
+
+[DHCPv4]
+RouteMetric=10
+
+[IPv6AcceptRA]
+RouteMetric=10
 ```
 
 `25-wireless.network`加入以下内容：
@@ -210,6 +216,13 @@ Name=wlan*
 
 [Network]
 DHCP=yes
+IgnoreCarrierLoss=3s
+
+[DHCPv4]
+RouteMetric=20
+
+[IPv6AcceptRA]
+RouteMetric=20
 ```
 
 随后执行：
