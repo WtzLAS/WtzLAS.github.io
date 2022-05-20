@@ -1,5 +1,5 @@
 +++
-title = "Wtz_LASR"
+title = "Wtz_LASR's Blog"
 description = "An ordinary people's normal blog."
 +++
 
