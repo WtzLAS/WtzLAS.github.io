@@ -73,44 +73,31 @@ Linux下使用cp或者cat写入。
 | `/mnt/efi`                   | `/dev/esp`       | [EFI system partition](https://en.wikipedia.org/wiki/EFI_system_partition) | FAT32        | 512MiB   |
 | `/mnt`,`/mnt/swap`,`/mnt/var` | `/dev/root_part` | Linux filesystem                                             | btrfs        | 剩余空间 |
 
+参考 btrfs 挂载参数：
+
+`compress=zstd,space_cache=v2,ssd,noatime`
+
+关于btrfs的挂载参数和chattr可参考[其manual中的说明](https://man.archlinux.org/man/btrfs.5#MOUNT_OPTIONS)和[ArchWiki中的相关介绍](https://wiki.archlinux.org/title/Btrfs#Disabling_CoW)。
+
 随后进行格式化和初步挂载：
 
 ```
 # mkfs.fat -F 32 /dev/esp
 # mkfs.btrfs /dev/root_part
-# mount /dev/root_part /mnt
+# mount /dev/root_part /mnt -o <MOUNT_OPTIONS>
+# mkdir /mnt/var
+# chattr +C /mnt/var
+# mount /dev/esp /mnt/boot
 ```
 
 如果与Windows装双系统，请务必先安装Windows，然后将Windows建立的ESP直接挂载到`/mnt/efi`，不可再次格式化。
-
-## btrfs subvolume创建和挂载
-
-btrfs subvolume的详细定义可参考[btrfs wiki中的说明](https://btrfs.wiki.kernel.org/index.php/SysadminGuide#Subvolumes)。
-
-关于btrfs的挂载参数和chattr可参考[其manual中的说明](https://man.archlinux.org/man/btrfs.5#MOUNT_OPTIONS)和[ArchWiki中的相关介绍](https://wiki.archlinux.org/title/Btrfs#Disabling_CoW)。
-
-```
-# btrfs subvolume create /mnt/@
-# btrfs subvolume create /mnt/@var
-# chattr +C /mnt/@var
-# btrfs subvolume create /mnt/@swap
-# chattr +C /mnt/@swap
-# umount -R /mnt
-# mount /dev/root_part /mnt -o subvol=@,autodefrag,compress=zstd,discard=async,space_cache,ssd,noatime
-# mkdir /mnt/var
-# mount /dev/root_part /mnt/var -o subvol=@var,autodefrag,discard=async,compress=none,space_cache,ssd,noatime
-# mkdir /mnt/swap
-# mount /dev/root_part /mnt/swap -o subvol=@swap,compress=none,space_cache,ssd,noatime
-# mkdir /mnt/boot
-# mount /dev/esp /mnt/boot
-```
 
 ## 建立swapfile
 
 参考[ArchWiki中的相关说明](https://wiki.archlinux.org/title/Btrfs#Swap_file)。
 
 ```
-# cd /mnt/swap
+# cd /mnt
 # touch swapfile
 # truncate -s 0 ./swapfile
 # chattr +C ./swapfile
@@ -128,20 +115,18 @@ btrfs subvolume的详细定义可参考[btrfs wiki中的说明](https://btrfs.wi
 | 包名                                    | 备注                                                   |
 | --------------------------------------- | ------------------------------------------------------ |
 | base                                    | -                                                      |
-| base-devel                              | 提供makepkg等使用AUR必要的工具                         |
-| linux-zen                               | linux kernel, but optimizied for desktop usage         |
-| linux-zen-headers                       | 为使用DKMS做准备                                       |
+| base-devel                              | AUR                        |
 | linux-firmware                          | -                                                      |
-| btrfs-progs                             | 用了btrfs还想不装？                                    |
+| btrfs-progs                             | -                                    |
 | nano                                    | 喜欢vim的可以换成vim                                   |
-| man-db, man-pages, texinfo              | 必备手册，有时候能救命                                 |
+| man-db, man-pages, texinfo              | -                                |
 | iwd                                     | 使用无线网络                                           |
 | git                                     | -                                                      |
-| zsh                                     | 1202年了还有人在除了root之外的地方用bash吗？:thinking: |
-| grub, dosfstools, efibootmgr, os-prober | grub2 yyds                                             |
+| zsh                                     | - |
+| grub, dosfstools, efibootmgr, os-prober | -                                           |
 
 ```
-pacstrap /mnt base base-devel linux-zen linux-zen-headers linux-firmware btrfs-progs nano man-db man-pages texinfo iwd git zsh grub dosfstools efibootmgr os-prober
+pacstrap /mnt base base-devel linux-firmware btrfs-progs nano man-db man-pages texinfo iwd git zsh grub dosfstools efibootmgr os-prober
 ```
 
 ## 生成`/etc/fstab`
@@ -237,6 +222,28 @@ RouteMetric=20
 # systemctl enable systemd-networkd
 ```
 
+## 编译 linux-xanmod 内核
+
+这是一个比较难的步骤（各种意义上），跟紧了！
+
+```
+# git clone https://aur.archlinux.org/linux-xanmod.git
+# cd linux-xanmod
+# nano PKGBUILD
+```
+
+然后在 nano 中修改 PKGBUILD 上方的选项。
+
+```
+# makepkg -si
+```
+
+## 启动 fstrim
+
+```
+# systemctl enable fstrim.timer
+```
+
 ## 设置root密码
 
 ```
@@ -330,37 +337,46 @@ EDITOR=nano visudo
 
 ## 安装字体
 
-起码得有个能顶顶的。
+很喜欢 ttf-liberation 的英文。
 
 ```
-# sudo pacman -S noto-fonts-cjk noto-fonts-emoji
+# sudo pacman -S noto-fonts-cjk noto-fonts-emoji ttf-liberation
 ```
+
+## 音频设置
+
+[pipewire](https://pipewire.org/) 是最新一代的Linux音频技术，用就完事了！
+
+```
+# paru -S pipewire pipewire-pulse pipewire-jack pipewire-alsa gst-plugin-pipewire
+```
+
+有冲突包一律卸载，pipewire会接替这些包的位置。
 
 ## 安装KDE和部分应用
 
 精挑细选，把一堆游戏都删掉了。挑几个重点说说。
 
-| 包名      | 备注                       |
+| 包名      | 备注                        |
 | --------- | -------------------------- |
 | ark       | WinRAR                     |
 | dolphin   | Explorer                   |
 | vlc       | PotPlayer                  |
 | flameshot | Snipaste                   |
-| gwenview  | AcdSee(?)                  |
+| gwenview  | AcdSee                     |
 | kcalc     | Calc, but MUCH MORE shabby |
 | kate      | Notepad, but more advanced |
 | konsole   | cmd                        |
-| okular    | Adobe Acrobat(?)           |
-| yakuake   | Y Y D S                    |
+| okular    | Adobe Acrobat              |
 
 ```
-# sudo pacman -S plasma-meta ark audiocd-kio dolphin dolphin-plugins vlc
-flameshot filelight gwenview kalarm kcalc kate kcolorchooser kcron kdeconnect
-kdegraphics-thumbnailers kdenetwork-filesharing kdepim-addons kdesdk-kioslaves
-kdesdk-thumbnailers kdf kdialog kfind kio-extras kio-gdrive kipi-plugins kmag
-kmousetool konsole korganizer krfb ksystemlog kwalletmanager okular partitionmanager
-pim-data-exporter pim-sieve-editor print-manager signon-kwallet-extension yakuake
-zeroconf-ioslave
+# sudo pacman -S plasma-meta ark dolphin dolphin-plugins vlc
+flameshot gwenview kalarm kcalc kate kcron kdeconnect
+kdegraphics-thumbnailers kdenetwork-filesharing kdepim-addons
+kdesdk-kioslaves kdesdk-thumbnailers kdf kdialog kfind kio-extras
+kmag konsole korganizer ksystemlog kwalletmanager okular
+pim-data-exporter pim-sieve-editor print-manager signon-kwallet-extension
+yakuake zeroconf-ioslave
 ```
 
 ## 配置SDDM
@@ -402,25 +418,11 @@ SDL_IM_MODULE=fcitx
 
 从此之后就可以丢掉pacman了。（雾）
 
-## 音频设置
-
-[pipewire](https://pipewire.org/)是最新一代的Linux音频技术，用就完事了！
+## systemd-networkd 集成
 
 ```
-# paru -S pipewire pipewire-pulse pipewire-jack pipewire-alsa gst-plugin-pipewire
+# paru -S networkd-notify-git
 ```
-
-有冲突包一律卸载，pipewire会接替这些包的位置。
-
-## 科学上网
-
-我使用xray + qv2ray的方案进行科学上网。
-
-```
-# paru -S xray qv2ray-dev-git proxychains
-```
-
-修改`/etc/proxychains.conf`，取消`quiet_mode`的注释，然后修改最后一行的代理地址。
 
 ## fcitx5皮肤
 
