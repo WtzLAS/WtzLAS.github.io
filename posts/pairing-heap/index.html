@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" integrity="sha384-IJLmUY0f1ePPX6uSCJ9Bxik64/meJmjSYD7dHaJqTXXEBE4y+Oe9P2KBZa/z7p0Q" crossorigin="anonymous">
+  <link href="https://wtzlas.github.io/deep-thought.css" rel="stylesheet" />
+  
+  
+
+  <title>
+    
+Wtz_LASR&#x27;s Blog | 配对堆
+
+  </title>
+
+  
+  
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mathtex-script-type.min.js" integrity="sha384-jiBVvJ8NGGj5n7kJaiWwWp9AjC+Yh8rhZY3GtAX8yU28azcLgoRo4oukO87g7zDT" crossorigin="anonymous"></script>
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+  
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;wtzlas.github.io">Wtz_LASR&#x27;s Blog</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;wtzlas.github.io&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;wtzlas.github.io&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;wtzlas.github.io&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;wtzlas.github.io&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <article class="box">
+          <h1 class="title">
+            配对堆
+          </h1>
+          <p class="subtitle"></p>
+          <div class="columns is-multiline is-gapless">
+            <div class="column is-8">
+              
+<span class="icon-text has-text-grey">
+  <span class="icon">
+    <i class="fas fa-user"></i>
+  </span>
+  <span>Wtz_LASR published on</span>
+  <span class="icon">
+    <i class="far fa-calendar-alt"></i>
+  </span>
+  <span><time datetime="2021-10-31T00:52:01Z">October 31, 2021</time></span>
+</span>
+
+            </div>
+            <div class="column is-4 has-text-right-desktop">
+              
+<span class="icon-text has-text-grey">
+  <span class="icon">
+    <i class="far fa-clock"></i>
+  </span>
+  <span>2 min,</span>
+  <span class="icon">
+    <i class="fas fa-pencil-alt"></i>
+  </span>
+  <span>381 words</span>
+</span>
+
+            </div>
+            <div class="column">
+              
+              
+<p>
+  Categories:
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://wtzlas.github.io/categories/suan-fa-yu-shu-ju-jie-gou/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-cube"></i>
+      </span>
+      <span>算法与数据结构</span>
+    </span>
+  </a>
+  
+</p>
+
+              
+            </div>
+            <div class="column has-text-right-desktop">
+              
+              
+<p>
+  Tags:
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://wtzlas.github.io/tags/mo-ban/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>模板</span>
+    </span>
+  </a>
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://wtzlas.github.io/tags/c/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>C++</span>
+    </span>
+  </a>
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://wtzlas.github.io/tags/pei-dui-dui/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>配对堆</span>
+    </span>
+  </a>
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://wtzlas.github.io/tags/oi/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>OI</span>
+    </span>
+  </a>
+  
+</p>
+
+              
+            </div>
+          </div>
+          <div class="content mt-2">
+            <p>来自遥远过去的遗产。</p>
+<pre data-lang="cpp" style="background-color:#2b303b;color:#6c7079;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#cd74e8;">#include </span><span style="color:#9acc76;">&lt;stdexcept&gt;
+</span><span style="color:#cd74e8;">#include </span><span style="color:#9acc76;">&lt;vector&gt;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">template </span><span style="color:#abb2bf;">&lt;</span><span style="color:#cd74e8;">typename</span><span style="color:#abb2bf;"> T&gt; </span><span style="color:#cd74e8;">class </span><span style="color:#f0c678;">pairing_heap </span><span style="color:#adb7c9;">{
+</span><span style="color:#cd74e8;">private</span><span style="color:#adb7c9;">:
+</span><span style="color:#adb7c9;">  </span><span style="color:#cd74e8;">struct </span><span style="color:#adb7c9;">pair_node {
+</span><span style="color:#adb7c9;">    T element;
+</span><span style="color:#adb7c9;">    pair_node *left_child, *next_sibling, *prev;
+</span><span style="color:#adb7c9;">
+</span><span style="color:#adb7c9;">    </span><span style="color:#5cb3fa;">pair_node</span><span style="color:#adb7c9;">(</span><span style="color:#cd74e8;">const</span><span style="color:#adb7c9;"> T &amp;</span><span style="color:#eb6772;">elm</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">      element = elm;
+</span><span style="color:#adb7c9;">      left_child = next_sibling = prev = </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">  };
+</span><span style="color:#adb7c9;">
+</span><span style="color:#adb7c9;">  pair_node *root;
+</span><span style="color:#adb7c9;">
+</span><span style="color:#adb7c9;">  </span><span style="color:#cd74e8;">void </span><span style="color:#5cb3fa;">compare_and_link</span><span style="color:#adb7c9;">(pair_node *&amp;</span><span style="color:#eb6772;">first</span><span style="color:#adb7c9;">, pair_node *</span><span style="color:#eb6772;">second</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(second == </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">      </span><span style="color:#cd74e8;">return</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(second-&gt;</span><span style="color:#eb6772;">element </span><span style="color:#adb7c9;">&lt; first-&gt;</span><span style="color:#eb6772;">element</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">      second-&gt;</span><span style="color:#eb6772;">prev </span><span style="color:#adb7c9;">= first-&gt;</span><span style="color:#eb6772;">prev</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">      first-&gt;</span><span style="color:#eb6772;">prev </span><span style="color:#adb7c9;">= second;
+</span><span style="color:#adb7c9;">      first-&gt;</span><span style="color:#eb6772;">next_sibling </span><span style="color:#adb7c9;">= second-&gt;</span><span style="color:#eb6772;">left_child</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">      </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(first-&gt;</span><span style="color:#eb6772;">next_sibling </span><span style="color:#adb7c9;">!= </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">        first-&gt;</span><span style="color:#eb6772;">next_sibling</span><span style="color:#adb7c9;">-&gt;</span><span style="color:#eb6772;">prev </span><span style="color:#adb7c9;">= first;
+</span><span style="color:#adb7c9;">      }
+</span><span style="color:#adb7c9;">      second-&gt;</span><span style="color:#eb6772;">left_child </span><span style="color:#adb7c9;">= first;
+</span><span style="color:#adb7c9;">      first = second;
+</span><span style="color:#adb7c9;">    } </span><span style="color:#cd74e8;">else </span><span style="color:#adb7c9;">{
+</span><span style="color:#adb7c9;">      second-&gt;</span><span style="color:#eb6772;">prev </span><span style="color:#adb7c9;">= first;
+</span><span style="color:#adb7c9;">      first-&gt;</span><span style="color:#eb6772;">next_sibling </span><span style="color:#adb7c9;">= second-&gt;</span><span style="color:#eb6772;">next_sibling</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">      </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(first-&gt;</span><span style="color:#eb6772;">next_sibling </span><span style="color:#adb7c9;">!= </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">        first-&gt;</span><span style="color:#eb6772;">next_sibling</span><span style="color:#adb7c9;">-&gt;</span><span style="color:#eb6772;">prev </span><span style="color:#adb7c9;">= first;
+</span><span style="color:#adb7c9;">      }
+</span><span style="color:#adb7c9;">      second-&gt;</span><span style="color:#eb6772;">next_sibling </span><span style="color:#adb7c9;">= first-&gt;</span><span style="color:#eb6772;">left_child</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">      </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(second-&gt;</span><span style="color:#eb6772;">next_sibling </span><span style="color:#adb7c9;">!= </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">        second-&gt;</span><span style="color:#eb6772;">next_sibling</span><span style="color:#adb7c9;">-&gt;</span><span style="color:#eb6772;">prev </span><span style="color:#adb7c9;">= second;
+</span><span style="color:#adb7c9;">      }
+</span><span style="color:#adb7c9;">      first-&gt;</span><span style="color:#eb6772;">left_child </span><span style="color:#adb7c9;">= second;
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">  }
+</span><span style="color:#adb7c9;">
+</span><span style="color:#adb7c9;">  pair_node *</span><span style="color:#5cb3fa;">combine_siblings</span><span style="color:#adb7c9;">(pair_node *</span><span style="color:#eb6772;">first_sibling</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(first_sibling-&gt;</span><span style="color:#eb6772;">next_sibling </span><span style="color:#adb7c9;">== </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">      </span><span style="color:#cd74e8;">return</span><span style="color:#adb7c9;"> first_sibling;
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">static</span><span style="color:#adb7c9;"> std::vector&lt;pair_node *&gt; </span><span style="color:#eb6772;">tree_array</span><span style="color:#adb7c9;">(</span><span style="color:#db9d63;">5</span><span style="color:#adb7c9;">);
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">register long long</span><span style="color:#adb7c9;"> num_siblings = </span><span style="color:#db9d63;">0</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">for </span><span style="color:#adb7c9;">(; first_sibling != </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">; ++num_siblings) {
+</span><span style="color:#adb7c9;">      </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(num_siblings == tree_array.</span><span style="color:#eb6772;">size</span><span style="color:#adb7c9;">()) {
+</span><span style="color:#adb7c9;">        tree_array.</span><span style="color:#eb6772;">resize</span><span style="color:#adb7c9;">(num_siblings * </span><span style="color:#db9d63;">2</span><span style="color:#adb7c9;">);
+</span><span style="color:#adb7c9;">      }
+</span><span style="color:#adb7c9;">      tree_array[num_siblings] = first_sibling;
+</span><span style="color:#adb7c9;">      first_sibling-&gt;</span><span style="color:#eb6772;">prev</span><span style="color:#adb7c9;">-&gt;</span><span style="color:#eb6772;">next_sibling </span><span style="color:#adb7c9;">= </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">      first_sibling = first_sibling-&gt;</span><span style="color:#eb6772;">next_sibling</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(num_siblings == tree_array.</span><span style="color:#eb6772;">size</span><span style="color:#adb7c9;">()) {
+</span><span style="color:#adb7c9;">      tree_array.</span><span style="color:#eb6772;">resize</span><span style="color:#adb7c9;">(num_siblings + </span><span style="color:#db9d63;">1</span><span style="color:#adb7c9;">);
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">    tree_array[num_siblings] = </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">register long long</span><span style="color:#adb7c9;"> i = </span><span style="color:#db9d63;">0</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">for </span><span style="color:#adb7c9;">(; i + </span><span style="color:#db9d63;">1 </span><span style="color:#adb7c9;">&lt; num_siblings; i += </span><span style="color:#db9d63;">2</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">      </span><span style="color:#eb6772;">compare_and_link</span><span style="color:#adb7c9;">(tree_array[i], tree_array[i + </span><span style="color:#db9d63;">1</span><span style="color:#adb7c9;">]);
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">register long long</span><span style="color:#adb7c9;"> j = i - </span><span style="color:#db9d63;">2</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(j == num_siblings - </span><span style="color:#db9d63;">3</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">      </span><span style="color:#eb6772;">compare_and_link</span><span style="color:#adb7c9;">(tree_array[j], tree_array[j + </span><span style="color:#db9d63;">2</span><span style="color:#adb7c9;">]);
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">for </span><span style="color:#adb7c9;">(; j &gt;= </span><span style="color:#db9d63;">2</span><span style="color:#adb7c9;">; j -= </span><span style="color:#db9d63;">2</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">      </span><span style="color:#eb6772;">compare_and_link</span><span style="color:#adb7c9;">(tree_array[j - </span><span style="color:#db9d63;">2</span><span style="color:#adb7c9;">], tree_array[j]);
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">return</span><span style="color:#adb7c9;"> tree_array[</span><span style="color:#db9d63;">0</span><span style="color:#adb7c9;">];
+</span><span style="color:#adb7c9;">  }
+</span><span style="color:#adb7c9;">
+</span><span style="color:#adb7c9;">  </span><span style="color:#cd74e8;">void </span><span style="color:#5cb3fa;">reclaim_memory</span><span style="color:#adb7c9;">(pair_node *</span><span style="color:#eb6772;">t</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(t != </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">      </span><span style="color:#eb6772;">reclaim_memory</span><span style="color:#adb7c9;">(t-&gt;</span><span style="color:#eb6772;">left_child</span><span style="color:#adb7c9;">);
+</span><span style="color:#adb7c9;">      </span><span style="color:#eb6772;">reclaim_memory</span><span style="color:#adb7c9;">(t-&gt;</span><span style="color:#eb6772;">next_sibling</span><span style="color:#adb7c9;">);
+</span><span style="color:#adb7c9;">      </span><span style="color:#cd74e8;">delete</span><span style="color:#adb7c9;"> t;
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">  }
+</span><span style="color:#adb7c9;">
+</span><span style="color:#cd74e8;">public</span><span style="color:#adb7c9;">:
+</span><span style="color:#adb7c9;">  </span><span style="color:#cd74e8;">typedef</span><span style="color:#adb7c9;"> pair_node *position;
+</span><span style="color:#adb7c9;">
+</span><span style="color:#adb7c9;">  </span><span style="color:#cd74e8;">void </span><span style="color:#5cb3fa;">make_empty</span><span style="color:#adb7c9;">() {
+</span><span style="color:#adb7c9;">    </span><span style="color:#eb6772;">reclaim_memory</span><span style="color:#adb7c9;">(root);
+</span><span style="color:#adb7c9;">    root = </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">  }
+</span><span style="color:#adb7c9;">
+</span><span style="color:#adb7c9;">  </span><span style="color:#5cb3fa;">pairing_heap</span><span style="color:#adb7c9;">() { root = </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">; }
+</span><span style="color:#adb7c9;">
+</span><span style="color:#adb7c9;">  </span><span style="color:#5cb3fa;">~pairing_heap</span><span style="color:#adb7c9;">() { </span><span style="color:#eb6772;">make_empty</span><span style="color:#adb7c9;">(); }
+</span><span style="color:#adb7c9;">
+</span><span style="color:#adb7c9;">  position </span><span style="color:#5cb3fa;">insert</span><span style="color:#adb7c9;">(</span><span style="color:#cd74e8;">const</span><span style="color:#adb7c9;"> T &amp;</span><span style="color:#eb6772;">x</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">    pair_node *new_node = </span><span style="color:#cd74e8;">new </span><span style="color:#eb6772;">pair_node</span><span style="color:#adb7c9;">{x};
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(root == </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">      root = new_node;
+</span><span style="color:#adb7c9;">    } </span><span style="color:#cd74e8;">else </span><span style="color:#adb7c9;">{
+</span><span style="color:#adb7c9;">      </span><span style="color:#eb6772;">compare_and_link</span><span style="color:#adb7c9;">(root, new_node);
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">return</span><span style="color:#adb7c9;"> new_node;
+</span><span style="color:#adb7c9;">  }
+</span><span style="color:#adb7c9;">
+</span><span style="color:#adb7c9;">  </span><span style="color:#cd74e8;">bool </span><span style="color:#5cb3fa;">empty</span><span style="color:#adb7c9;">() </span><span style="color:#cd74e8;">const </span><span style="color:#adb7c9;">{ </span><span style="color:#cd74e8;">return</span><span style="color:#adb7c9;"> root == </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">; }
+</span><span style="color:#adb7c9;">
+</span><span style="color:#adb7c9;">  </span><span style="color:#cd74e8;">const</span><span style="color:#adb7c9;"> T &amp;</span><span style="color:#5cb3fa;">find_min</span><span style="color:#adb7c9;">() </span><span style="color:#cd74e8;">const </span><span style="color:#adb7c9;">{
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(</span><span style="color:#eb6772;">empty</span><span style="color:#adb7c9;">()) {
+</span><span style="color:#adb7c9;">      </span><span style="color:#cd74e8;">throw </span><span style="color:#adb7c9;">std::</span><span style="color:#eb6772;">underflow_error</span><span style="color:#adb7c9;">(</span><span style="color:#9acc76;">&quot;PairingHeap Underflow&quot;</span><span style="color:#adb7c9;">);
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">return</span><span style="color:#adb7c9;"> root-&gt;</span><span style="color:#eb6772;">element</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">  }
+</span><span style="color:#adb7c9;">
+</span><span style="color:#adb7c9;">  </span><span style="color:#cd74e8;">void </span><span style="color:#5cb3fa;">delete_min</span><span style="color:#adb7c9;">() {
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(</span><span style="color:#eb6772;">empty</span><span style="color:#adb7c9;">()) {
+</span><span style="color:#adb7c9;">      </span><span style="color:#cd74e8;">throw </span><span style="color:#adb7c9;">std::</span><span style="color:#eb6772;">underflow_error</span><span style="color:#adb7c9;">(</span><span style="color:#9acc76;">&quot;PairingHeap Underflow&quot;</span><span style="color:#adb7c9;">);
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">    pair_node *old_root = root;
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(root-&gt;</span><span style="color:#eb6772;">left_child </span><span style="color:#adb7c9;">== </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">      root = </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">    } </span><span style="color:#cd74e8;">else </span><span style="color:#adb7c9;">{
+</span><span style="color:#adb7c9;">      root = </span><span style="color:#eb6772;">combine_siblings</span><span style="color:#adb7c9;">(root-&gt;</span><span style="color:#eb6772;">left_child</span><span style="color:#adb7c9;">);
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">delete</span><span style="color:#adb7c9;"> old_root;
+</span><span style="color:#adb7c9;">  }
+</span><span style="color:#adb7c9;">
+</span><span style="color:#adb7c9;">  </span><span style="color:#cd74e8;">void </span><span style="color:#5cb3fa;">extract_min</span><span style="color:#adb7c9;">(T &amp;</span><span style="color:#eb6772;">min_item</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">    min_item = </span><span style="color:#eb6772;">find_min</span><span style="color:#adb7c9;">();
+</span><span style="color:#adb7c9;">    </span><span style="color:#eb6772;">delete_min</span><span style="color:#adb7c9;">();
+</span><span style="color:#adb7c9;">  }
+</span><span style="color:#adb7c9;">
+</span><span style="color:#adb7c9;">  </span><span style="color:#cd74e8;">void </span><span style="color:#5cb3fa;">decrease_key</span><span style="color:#adb7c9;">(position </span><span style="color:#eb6772;">p</span><span style="color:#adb7c9;">, </span><span style="color:#cd74e8;">const</span><span style="color:#adb7c9;"> T &amp;</span><span style="color:#eb6772;">new_val</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(p-&gt;</span><span style="color:#eb6772;">element </span><span style="color:#adb7c9;">&lt; new_val) {
+</span><span style="color:#adb7c9;">      </span><span style="color:#cd74e8;">throw </span><span style="color:#adb7c9;">std::</span><span style="color:#eb6772;">invalid_argument</span><span style="color:#adb7c9;">(</span><span style="color:#9acc76;">&quot;PairingHeap new_val larger than oldVal&quot;</span><span style="color:#adb7c9;">);
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">    p-&gt;</span><span style="color:#eb6772;">element </span><span style="color:#adb7c9;">= new_val;
+</span><span style="color:#adb7c9;">    </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(p != root) {
+</span><span style="color:#adb7c9;">      </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(p-&gt;</span><span style="color:#eb6772;">next_sibling </span><span style="color:#adb7c9;">!= </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">) {
+</span><span style="color:#adb7c9;">        p-&gt;</span><span style="color:#eb6772;">next_sibling</span><span style="color:#adb7c9;">-&gt;</span><span style="color:#eb6772;">prev </span><span style="color:#adb7c9;">= p-&gt;</span><span style="color:#eb6772;">prev</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">      }
+</span><span style="color:#adb7c9;">      </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">(p-&gt;</span><span style="color:#eb6772;">prev</span><span style="color:#adb7c9;">-&gt;</span><span style="color:#eb6772;">left_child </span><span style="color:#adb7c9;">== p) {
+</span><span style="color:#adb7c9;">        p-&gt;</span><span style="color:#eb6772;">prev</span><span style="color:#adb7c9;">-&gt;</span><span style="color:#eb6772;">left_child </span><span style="color:#adb7c9;">= p-&gt;</span><span style="color:#eb6772;">next_sibling</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">      } </span><span style="color:#cd74e8;">else </span><span style="color:#adb7c9;">{
+</span><span style="color:#adb7c9;">        p-&gt;</span><span style="color:#eb6772;">prev</span><span style="color:#adb7c9;">-&gt;</span><span style="color:#eb6772;">next_sibling </span><span style="color:#adb7c9;">= p-&gt;</span><span style="color:#eb6772;">next_sibling</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">      }
+</span><span style="color:#adb7c9;">      p-&gt;</span><span style="color:#eb6772;">next_sibling </span><span style="color:#adb7c9;">= </span><span style="color:#db9d63;">nullptr</span><span style="color:#adb7c9;">;
+</span><span style="color:#adb7c9;">      </span><span style="color:#eb6772;">compare_and_link</span><span style="color:#adb7c9;">(root, p);
+</span><span style="color:#adb7c9;">    }
+</span><span style="color:#adb7c9;">  }
+</span><span style="color:#adb7c9;">}</span><span style="color:#abb2bf;">;
+</span></code></pre>
+<p>根据 <em>Data Structures and Algorithm Analysis in C++ (Fourth Edition)</em> 整理得出。</p>
+
+          </div>
+        </article>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <nav class="level">
+          
+          <div class="level-item has-text-centered">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;wtzlas.github.io&#x2F;posts&#x2F;fast-containers&#x2F;">
+              <span class="icon mr-2">
+                <i class="fas fa-arrow-circle-left"></i>
+              </span>
+              快速容器
+            </a>
+          </div>
+           
+          <div class="level-item has-text-centered">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;wtzlas.github.io&#x2F;posts&#x2F;arch-linux-installation&#x2F;">
+              Arch Linux 安装笔记<span class="icon ml-2">
+                <i class="fas fa-arrow-circle-right"></i>
+              </span>
+            </a>
+          </div>
+            
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
+
+
+
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://wtzlas.github.io/elasticlunr.min.js"></script>
+  <script src="https://wtzlas.github.io/search_index.en.js"></script><script src="https://wtzlas.github.io/js/site.js"></script>
+
+  
+
+
+
+
+
+  
+  
+</body>
+
+</html>

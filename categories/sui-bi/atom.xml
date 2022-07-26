@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Wtz_LASR&#x27;s Blog - 随笔</title>
+	<subtitle>An ordinary people&#x27;s normal blog.</subtitle>
+	<link href="https://wtzlas.github.io/categories/sui-bi/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://wtzlas.github.io"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2022-05-19T03:42:05+00:00</updated>
+	<id>https://wtzlas.github.io/categories/sui-bi/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Interaction Nets 论文集</title>
+		<published>2022-03-08T17:36:12+00:00</published>
+		<updated>2022-03-08T17:36:12+00:00</updated>
+		<link href="https://wtzlas.github.io/posts/interaction-nets-papers/" type="text/html"/>
+		<id>https://wtzlas.github.io/posts/interaction-nets-papers/</id>
+		<content type="html">&lt;p&gt;一些Interaction nets和用其实现Lambda reduction方向上的论文&#x2F;文章列表。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;纯Interaction nets方向：&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;link.springer.com&#x2F;chapter&#x2F;10.1007&#x2F;10704567_10&quot;&gt;A Calculus for Interaction Nets&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Maribel Fernández, Ian Mackie (1999)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.sciencedirect.com&#x2F;science&#x2F;article&#x2F;pii&#x2F;S1571066105803639&quot;&gt;Interaction Nets with McCarthy&#x27;s amb&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Maribel Fernández, Lionel Khalil (2002)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.sciencedirect.com&#x2F;science&#x2F;article&#x2F;pii&#x2F;S1571066105826143&quot;&gt;Weak Reduction and Garbage Collection in Interaction Net&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Jorge Sousa Pinto (2003)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;1702.06092&quot;&gt;Parallel needed reduction for pure interaction nets&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Anton Salikhmetov (2017)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;1505.07164&quot;&gt;An Implementation Model for Interaction Nets&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Abubakar Hassan, Ian Mackie, Shinya Sato (2015)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;sro.sussex.ac.uk&#x2F;id&#x2F;eprint&#x2F;54469&#x2F;&quot;&gt;Design and implementation of a low-level language for interaction nets&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Shinya Sato (2015)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Interaction nets与Lambda reduction结合方向：&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.phil.uu.nl&#x2F;%7Eoostrom&#x2F;publication&#x2F;pdf&#x2F;lambdascope.pdf&quot;&gt;Lambdascope: Another optimal implementation of the lambda-calculus&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Vincent van Oostrom, Kees-Jan van de Looij, Marijn Zwitserlood (2004)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;link.springer.com&#x2F;chapter&#x2F;10.1007&#x2F;978-3-642-24452-0_3&quot;&gt;An Interaction Net Implementation of Closed Reduction&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Ian Mackie (2008)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;1304.2290&quot;&gt;Macro Lambda Calculus&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Anton Salikhmetov (2013)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;1710.07516&quot;&gt;An impure solution to the problem of matching fans&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Anton Salikhmetov (2017)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Arch Linux 安装笔记</title>
+		<published>2021-10-30T20:06:07+00:00</published>
+		<updated>2022-05-19T03:42:05+00:00</updated>
+		<link href="https://wtzlas.github.io/posts/arch-linux-installation/" type="text/html"/>
+		<id>https://wtzlas.github.io/posts/arch-linux-installation/</id>
+		<content type="html">&lt;h1 id=&quot;zhun-bei&quot;&gt;准备&lt;&#x2F;h1&gt;
+&lt;p&gt;这部分的工作与ArchWiki上的&lt;a href=&quot;https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;title&#x2F;Installation_guide#Pre-installation&quot;&gt;Installation Guide第一部分&lt;&#x2F;a&gt;大同小异，熟悉的读者大概可以跳过（？🤔）。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;zhun-bei-archisohuan-jing&quot;&gt;准备ArchISO环境&lt;&#x2F;h2&gt;
+&lt;p&gt;由于众所周知的原因，最好从镜像站下载ISO文件。这里推荐从&lt;a href=&quot;https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;archlinux&#x2F;iso&#x2F;&quot;&gt;清华大学开源软件镜像站&lt;&#x2F;a&gt;下载。&lt;&#x2F;p&gt;
+&lt;p&gt;下载完成后，Windows下用&lt;a href=&quot;https:&#x2F;&#x2F;rufus.ie&#x2F;&quot;&gt;Rufus&lt;&#x2F;a&gt;刻录到U盘中。&lt;&#x2F;p&gt;
+&lt;p&gt;Linux下使用cp或者cat写入。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# cp path&#x2F;to&#x2F;archlinux-version-x86_64.iso &#x2F;dev&#x2F;sdx
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;然后启动到ArchISO环境即可。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;lian-wang&quot;&gt;联网&lt;&#x2F;h2&gt;
+&lt;p&gt;如果是有线连接（使用DHCP）这时候systemd-networkd应该已经搞定了，如果是无线网络还需要使用iwctl连接。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# iwctl
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;[iwd]# station wlan0 scan
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;[iwd]# station wlan0 get-networks
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;[iwd]# station wlan0 connect &amp;lt;YOUR_NETWORK_SSID&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;连接完成后用ping测试一下确保网络通畅。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;she-zhi-pacmanjing-xiang&quot;&gt;设置pacman镜像&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;title&#x2F;Reflector&quot;&gt;reflector&lt;&#x2F;a&gt;是用来自动更新&lt;code&gt;&#x2F;etc&#x2F;pacman.d&#x2F;mirrorlist&lt;&#x2F;code&gt;的Python脚本，在网络上线后会立刻由systemd执行，但是默认的配置过于铸币😠，因此联网之后直接先关闭它。然后执行我们优化过的方案。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# systemctl stop reflector
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# reflector -c china -f 5 --sort score --save &#x2F;etc&#x2F;pacman.d&#x2F;mirrorlist
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;she-zhi-pacman&quot;&gt;设置pacman&lt;&#x2F;h2&gt;
+&lt;p&gt;修改&lt;code&gt;&#x2F;etc&#x2F;pacman.conf&lt;&#x2F;code&gt;，取消&lt;code&gt;Color&lt;&#x2F;code&gt;和&lt;code&gt;ParallelDownload=5&lt;&#x2F;code&gt;前的注释，这样你的pacman就有色彩和并行下载了。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;geng-xin-shi-zhong&quot;&gt;更新时钟&lt;&#x2F;h2&gt;
+&lt;p&gt;没啥好说的，更就完事了。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# timedatectl set-ntp true
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;fen-qu-ge-shi-hua-he-chu-bu-gua-zai&quot;&gt;分区，格式化和初步挂载&lt;&#x2F;h2&gt;
+&lt;p&gt;参考布局：&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;挂载点&lt;&#x2F;th&gt;&lt;th&gt;分区&lt;&#x2F;th&gt;&lt;th&gt;分区类型&lt;&#x2F;th&gt;&lt;th&gt;文件系统类型&lt;&#x2F;th&gt;&lt;th align=&quot;left&quot;&gt;建议大小&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&#x2F;mnt&#x2F;efi&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;&#x2F;dev&#x2F;esp&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;EFI_system_partition&quot;&gt;EFI system partition&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;FAT32&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;512MiB&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&#x2F;mnt&lt;&#x2F;code&gt;,&lt;code&gt;&#x2F;mnt&#x2F;swap&lt;&#x2F;code&gt;,&lt;code&gt;&#x2F;mnt&#x2F;var&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;&#x2F;dev&#x2F;root_part&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;td&gt;Linux filesystem&lt;&#x2F;td&gt;&lt;td&gt;btrfs&lt;&#x2F;td&gt;&lt;td align=&quot;left&quot;&gt;剩余空间&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;参考 btrfs 挂载参数：&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;compress=zstd,space_cache=v2,ssd,noatime&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;关于btrfs的挂载参数和chattr可参考&lt;a href=&quot;https:&#x2F;&#x2F;man.archlinux.org&#x2F;man&#x2F;btrfs.5#MOUNT_OPTIONS&quot;&gt;其manual中的说明&lt;&#x2F;a&gt;和&lt;a href=&quot;https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;title&#x2F;Btrfs#Disabling_CoW&quot;&gt;ArchWiki中的相关介绍&lt;&#x2F;a&gt;。&lt;&#x2F;p&gt;
+&lt;p&gt;随后进行格式化和初步挂载：&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# mkfs.fat -F 32 &#x2F;dev&#x2F;esp
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# mkfs.btrfs &#x2F;dev&#x2F;root_part
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# mount &#x2F;dev&#x2F;root_part &#x2F;mnt -o &amp;lt;MOUNT_OPTIONS&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# mkdir &#x2F;mnt&#x2F;var
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# chattr +C &#x2F;mnt&#x2F;var
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# mount &#x2F;dev&#x2F;esp &#x2F;mnt&#x2F;boot
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;如果与Windows装双系统，请务必先安装Windows，然后将Windows建立的ESP直接挂载到&lt;code&gt;&#x2F;mnt&#x2F;efi&lt;&#x2F;code&gt;，不可再次格式化。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;jian-li-swapfile&quot;&gt;建立swapfile&lt;&#x2F;h2&gt;
+&lt;p&gt;参考&lt;a href=&quot;https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;title&#x2F;Btrfs#Swap_file&quot;&gt;ArchWiki中的相关说明&lt;&#x2F;a&gt;。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# cd &#x2F;mnt
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# touch swapfile
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# truncate -s 0 .&#x2F;swapfile
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# chattr +C .&#x2F;swapfile
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# btrfs property set .&#x2F;swapfile compression none
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# dd if=&#x2F;dev&#x2F;zero of=.&#x2F;swapfile bs=1M count=&amp;lt;YOUR_INTENTED_SWAP_SPACE&amp;gt; status=progress
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# chmod 600 .&#x2F;swapfile
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# mkswap .&#x2F;swapfile
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# swapon .&#x2F;swapfile
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;an-zhuang-yu-chu-bu-pei-zhi&quot;&gt;安装与初步配置&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;an-zhuang-bi-yao-bao&quot;&gt;安装必要包&lt;&#x2F;h2&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;包名&lt;&#x2F;th&gt;&lt;th&gt;备注&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;base&lt;&#x2F;td&gt;&lt;td&gt;-&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;base-devel&lt;&#x2F;td&gt;&lt;td&gt;AUR&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;linux-firmware&lt;&#x2F;td&gt;&lt;td&gt;-&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;btrfs-progs&lt;&#x2F;td&gt;&lt;td&gt;-&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;nano&lt;&#x2F;td&gt;&lt;td&gt;喜欢vim的可以换成vim&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;man-db, man-pages, texinfo&lt;&#x2F;td&gt;&lt;td&gt;-&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;iwd&lt;&#x2F;td&gt;&lt;td&gt;使用无线网络&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;git&lt;&#x2F;td&gt;&lt;td&gt;-&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;zsh&lt;&#x2F;td&gt;&lt;td&gt;-&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;grub, dosfstools, efibootmgr, os-prober&lt;&#x2F;td&gt;&lt;td&gt;-&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;pacstrap &#x2F;mnt base base-devel linux-firmware btrfs-progs nano man-db man-pages texinfo iwd git zsh grub dosfstools efibootmgr os-prober
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;sheng-cheng-etc-fstab&quot;&gt;生成&lt;code&gt;&#x2F;etc&#x2F;fstab&lt;&#x2F;code&gt;&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# genfstab -U &#x2F;mnt &amp;gt;&amp;gt; &#x2F;mnt&#x2F;etc&#x2F;fstab
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;记得检查下&lt;code&gt;&#x2F;etc&#x2F;fstab&lt;&#x2F;code&gt;里的挂载选项，有时候会丢。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fu-zhi-wu-xian-wang-luo-pei-zhi&quot;&gt;复制无线网络配置&lt;&#x2F;h2&gt;
+&lt;p&gt;你不会想再来一遍的。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# mkdir -p &#x2F;mnt&#x2F;var&#x2F;lib&#x2F;iwd
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# cp &#x2F;var&#x2F;lib&#x2F;iwd&#x2F;* &#x2F;mnt&#x2F;var&#x2F;lib&#x2F;iwd
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;chroot&quot;&gt;chroot&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# arch-chroot &#x2F;mnt
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;shi-qu-pei-zhi&quot;&gt;时区配置&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# ln -sf &#x2F;usr&#x2F;share&#x2F;zoneinfo&#x2F;Asia&#x2F;Shanghai &#x2F;etc&#x2F;localtime
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# hwclock --systohc
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;ben-di-hua&quot;&gt;本地化&lt;&#x2F;h2&gt;
+&lt;p&gt;修改&lt;code&gt;&#x2F;etc&#x2F;locale.gen&lt;&#x2F;code&gt; ，取消&lt;code&gt;en_US.UTF-8 UTF-8&lt;&#x2F;code&gt;和&lt;code&gt;zh_CN.UTF-8 UTF-8&lt;&#x2F;code&gt;的注释。&lt;&#x2F;p&gt;
+&lt;p&gt;然后运行locale-gen，设置成英文（推荐在安装图形界面之前使用英文）。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# locale-gen
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# echo LANG=en_US.UTF-8 &amp;gt; &#x2F;etc&#x2F;locale.conf
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;pei-zhi-wang-luo&quot;&gt;配置网络&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# echo &amp;lt;YOUR_HOSTNAME&amp;gt; &amp;gt; &#x2F;etc&#x2F;hostname
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;看起来systemd帮你搞定本地主机名解析啦😆，🤔就不用改&lt;code&gt;&#x2F;etc&#x2F;hosts&lt;&#x2F;code&gt;了。&lt;&#x2F;p&gt;
+&lt;p&gt;然后在&lt;code&gt;&#x2F;etc&#x2F;systemd&#x2F;network&#x2F;&lt;&#x2F;code&gt;下新建&lt;code&gt;20-wired.network&lt;&#x2F;code&gt;和&lt;code&gt;25-wireless.network&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
+&lt;p&gt;这里只配置了DHCP网络需要的内容，特殊需求请自行查阅ArchWiki。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;20-wired.network&lt;&#x2F;code&gt;加入以下内容：&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;[Match]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;Name=en*
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;[Network]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;DHCP=yes
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;[DHCPv4]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;RouteMetric=10
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;[IPv6AcceptRA]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;RouteMetric=10
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;code&gt;25-wireless.network&lt;&#x2F;code&gt;加入以下内容：&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;[Match]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;Name=wlan*
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;[Network]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;DHCP=yes
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;IgnoreCarrierLoss=3s
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;[DHCPv4]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;RouteMetric=20
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;[IPv6AcceptRA]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;RouteMetric=20
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;随后执行：&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# systemctl enable iwd
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# systemctl enable systemd-networkd
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;bian-yi-linux-xanmod-nei-he&quot;&gt;编译 linux-xanmod 内核&lt;&#x2F;h2&gt;
+&lt;p&gt;这是一个比较难的步骤（各种意义上），跟紧了！&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# git clone https:&#x2F;&#x2F;aur.archlinux.org&#x2F;linux-xanmod.git
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# cd linux-xanmod
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# nano PKGBUILD
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;然后在 nano 中修改 PKGBUILD 上方的选项。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# makepkg -si
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;qi-dong-fstrim&quot;&gt;启动 fstrim&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# systemctl enable fstrim.timer
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;she-zhi-rootmi-ma&quot;&gt;设置root密码&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# passwd
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;球球大伙别123456了。再用我就：👊👊👊&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;an-zhuang-cpuwei-ma&quot;&gt;安装CPU微码&lt;&#x2F;h2&gt;
+&lt;p&gt;下面这俩安一个就行了。&lt;&#x2F;p&gt;
+&lt;p&gt;（可移动介质安装除外，这俩都得装。）&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# pacman -S amd-ucode
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;或者&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# pacman -S intel-ucode
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;she-zhi-yin-dao&quot;&gt;设置引导&lt;&#x2F;h2&gt;
+&lt;p&gt;修改&lt;code&gt;&#x2F;etc&#x2F;default&#x2F;grub&lt;&#x2F;code&gt;，添加&lt;code&gt;GRUB_DISABLE_OS_PROBER=false&lt;&#x2F;code&gt;来启动grub的os-prober功能。&lt;&#x2F;p&gt;
+&lt;p&gt;将原有的默认内核参数清空，并填入&lt;code&gt;acpi_backlight=vendor&lt;&#x2F;code&gt;来解决部分笔记本屏幕亮度保存失败的问题，有动手能力者可以尝试&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;FedeDP&#x2F;Clight&quot;&gt;clight&lt;&#x2F;a&gt;。&lt;&#x2F;p&gt;
+&lt;p&gt;没人会想去手写grub的配置文件的。😢&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# grub-install --target=x86_64-efi --efi-directory=&#x2F;boot --bootloader-id=GRUB
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;可移动介质还请加入&lt;code&gt;--removable --recheck&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# grub-mkconfig -o &#x2F;boot&#x2F;grub&#x2F;grub.cfg
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;zhong-qi&quot;&gt;重启&lt;&#x2F;h2&gt;
+&lt;p&gt;行了，你的Arch已经能自己动了，记得把安装介质拔出去。（？&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# reboot
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;pei-zhi-wang-luo-di-er-bu-fen&quot;&gt;配置网络（第二部分）&lt;&#x2F;h2&gt;
+&lt;p&gt;不能忘了systemd-resolved啊！&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# systemctl enable systemd-resolved
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# systemctl start systemd-resolved
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# ln -sf &#x2F;run&#x2F;systemd&#x2F;resolve&#x2F;stub-resolv.conf &#x2F;etc&#x2F;resolv.conf
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;tian-jia-yong-hu&quot;&gt;添加用户&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# useradd -m -G wheel -s &#x2F;bin&#x2F;zsh &amp;lt;USERNAME&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# passwd &amp;lt;USERNAME&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;she-zhi-sudoer&quot;&gt;设置sudoer&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;EDITOR=nano visudo
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;使用vim的请换成&lt;code&gt;EDTIOR=vim&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;an-zhuang-tu-xing-hua-jie-mian&quot;&gt;安装图形化界面&lt;&#x2F;h1&gt;
+&lt;p&gt;马上就是最后一步啦~🙌&lt;&#x2F;p&gt;
+&lt;p&gt;鉴于GNOME对Fractional Scaling的支持非常难以言喻，HiDPI屏幕可以战略性放弃GNOME了。&lt;&#x2F;p&gt;
+&lt;p&gt;当然是用香香的KDE啦~😆&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;an-zhuang-xian-qia-qu-dong&quot;&gt;安装显卡驱动&lt;&#x2F;h2&gt;
+&lt;p&gt;参考&lt;a href=&quot;https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;title&#x2F;Xorg#Driver_installation&quot;&gt;ArchWiki上关于显卡驱动的介绍&lt;&#x2F;a&gt;。&lt;&#x2F;p&gt;
+&lt;p&gt;这里安装xf86-video-amdgpu和nvidia-dkms，（&lt;a href=&quot;https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;title&#x2F;Dynamic_Kernel_Module_Support&quot;&gt;关于DKMS的介绍&lt;&#x2F;a&gt;）。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# sudo pacman -S xf86-video-amdgpu nvidia-dkms libva-mesa-driver mesa-vdpau
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;an-zhuang-zi-ti&quot;&gt;安装字体&lt;&#x2F;h2&gt;
+&lt;p&gt;很喜欢 ttf-liberation 的英文。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# sudo pacman -S noto-fonts-cjk noto-fonts-emoji ttf-liberation
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;yin-pin-she-zhi&quot;&gt;音频设置&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pipewire.org&#x2F;&quot;&gt;pipewire&lt;&#x2F;a&gt; 是最新一代的Linux音频技术，用就完事了！&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# paru -S pipewire pipewire-pulse pipewire-jack pipewire-alsa gst-plugin-pipewire
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;有冲突包一律卸载，pipewire会接替这些包的位置。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;an-zhuang-kdehe-bu-fen-ying-yong&quot;&gt;安装KDE和部分应用&lt;&#x2F;h2&gt;
+&lt;p&gt;精挑细选，把一堆游戏都删掉了。挑几个重点说说。&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;包名&lt;&#x2F;th&gt;&lt;th&gt;备注&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;ark&lt;&#x2F;td&gt;&lt;td&gt;WinRAR&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;dolphin&lt;&#x2F;td&gt;&lt;td&gt;Explorer&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;vlc&lt;&#x2F;td&gt;&lt;td&gt;PotPlayer&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;flameshot&lt;&#x2F;td&gt;&lt;td&gt;Snipaste&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;gwenview&lt;&#x2F;td&gt;&lt;td&gt;AcdSee&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;kcalc&lt;&#x2F;td&gt;&lt;td&gt;Calc, but MUCH MORE shabby&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;kate&lt;&#x2F;td&gt;&lt;td&gt;Notepad, but more advanced&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;konsole&lt;&#x2F;td&gt;&lt;td&gt;cmd&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;okular&lt;&#x2F;td&gt;&lt;td&gt;Adobe Acrobat&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# sudo pacman -S plasma-meta ark dolphin dolphin-plugins vlc
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;flameshot gwenview kalarm kcalc kate kcron kdeconnect
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;kdegraphics-thumbnailers kdenetwork-filesharing kdepim-addons
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;kdesdk-kioslaves kdesdk-thumbnailers kdf kdialog kfind kio-extras
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;kmag konsole korganizer ksystemlog kwalletmanager okular
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;pim-data-exporter pim-sieve-editor print-manager signon-kwallet-extension
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;yakuake zeroconf-ioslave
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;pei-zhi-sddm&quot;&gt;配置SDDM&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# systemctl enable sddm
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;jin-jie-she-zhi&quot;&gt;进阶设置&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;an-zhuang-shu-ru-fa&quot;&gt;安装输入法&lt;&#x2F;h2&gt;
+&lt;p&gt;这里使用无敌的fcitx5 + rime。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# sudo pacman -S fcitx5-im fcitx5-rime
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;修改&lt;code&gt;&#x2F;etc&#x2F;environment&lt;&#x2F;code&gt;加入以下内容：&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;GTK_IM_MODULE=fcitx
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;QT_IM_MODULE=fcitx
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;XMODIFIERS=@im=fcitx
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;SDL_IM_MODULE=fcitx
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;aur-helper&quot;&gt;AUR Helper&lt;&#x2F;h2&gt;
+&lt;p&gt;我是Rust铁粉所以我用paru。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# git clone https:&#x2F;&#x2F;aur.archlinux.org&#x2F;paru.git
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# cd paru
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# makepkg -si
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# cd ..
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# rm -rf paru
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;从此之后就可以丢掉pacman了。（雾）&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;systemd-networkd-ji-cheng&quot;&gt;systemd-networkd 集成&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# paru -S networkd-notify-git
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;fcitx5pi-fu&quot;&gt;fcitx5皮肤&lt;&#x2F;h2&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# paru -S fcitx5-breeze
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;接着在fcitx5的配置工具中切换皮肤。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;pei-zhi-zsh&quot;&gt;配置zsh&lt;&#x2F;h2&gt;
+&lt;p&gt;为了让zsh更好看更好用，oh-my-zsh是必需的啦~&lt;&#x2F;p&gt;
+&lt;p&gt;先安装一个Nerd Font字体以支持奇怪符号。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# paru -S nerd-fonts-meslo
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;然后修改konsole配置使用MesloLGS Nerd Font Mono字体。&lt;&#x2F;p&gt;
+&lt;p&gt;这里使用antigen来做zsh的包管理。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# paru -S antigen
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;修改&lt;code&gt;~&#x2F;.zshrc&lt;&#x2F;code&gt;，加入以下内容：&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;source &#x2F;usr&#x2F;share&#x2F;zsh&#x2F;share&#x2F;antigen.zsh
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;antigen use oh-my-zsh
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;antigen bundle sudo
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;antigen bundle zdharma-continuum&#x2F;fast-syntax-highlighting
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;antigen bundle zsh-users&#x2F;zsh-autosuggestions
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;antigen bundle zsh-users&#x2F;zsh-completions
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;antigen theme romkatv&#x2F;powerlevel10k
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;antigen apply
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;随后：&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;# proxychains zsh
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;然后你的zsh就有炫酷的语法高亮、自动建议和prompt啦~&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ben-di-hua-di-er-bu-fen&quot;&gt;本地化（第二部分）&lt;&#x2F;h2&gt;
+&lt;p&gt;如果你发现本地化还有问题，请先在KDE的系统设置里设置，然后执行：&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#6c7079;&quot;&gt;&lt;code&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;sudo localectl set-locale LANG=zh_CN.UTF-8
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;wei-sheng&quot;&gt;尾声&lt;&#x2F;h1&gt;
+&lt;p&gt;到这里你的Arch已经基本完成，图形化界面都有，开始你的愉快新生活吧~&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

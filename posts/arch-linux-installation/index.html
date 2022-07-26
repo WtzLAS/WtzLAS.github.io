@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" integrity="sha384-IJLmUY0f1ePPX6uSCJ9Bxik64/meJmjSYD7dHaJqTXXEBE4y+Oe9P2KBZa/z7p0Q" crossorigin="anonymous">
+  <link href="https://wtzlas.github.io/deep-thought.css" rel="stylesheet" />
+  
+  
+
+  <title>
+    
+Wtz_LASR&#x27;s Blog | Arch Linux 安装笔记
+
+  </title>
+
+  
+  
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mathtex-script-type.min.js" integrity="sha384-jiBVvJ8NGGj5n7kJaiWwWp9AjC+Yh8rhZY3GtAX8yU28azcLgoRo4oukO87g7zDT" crossorigin="anonymous"></script>
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+  
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;wtzlas.github.io">Wtz_LASR&#x27;s Blog</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;wtzlas.github.io&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;wtzlas.github.io&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;wtzlas.github.io&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;wtzlas.github.io&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <article class="box">
+          <h1 class="title">
+            Arch Linux 安装笔记
+          </h1>
+          <p class="subtitle"></p>
+          <div class="columns is-multiline is-gapless">
+            <div class="column is-8">
+              
+<span class="icon-text has-text-grey">
+  <span class="icon">
+    <i class="fas fa-user"></i>
+  </span>
+  <span>Wtz_LASR published on</span>
+  <span class="icon">
+    <i class="far fa-calendar-alt"></i>
+  </span>
+  <span><time datetime="2021-10-30T20:06:07Z">October 30, 2021</time></span>
+</span>
+
+            </div>
+            <div class="column is-4 has-text-right-desktop">
+              
+<span class="icon-text has-text-grey">
+  <span class="icon">
+    <i class="far fa-clock"></i>
+  </span>
+  <span>10 min,</span>
+  <span class="icon">
+    <i class="fas fa-pencil-alt"></i>
+  </span>
+  <span>1862 words</span>
+</span>
+
+            </div>
+            <div class="column">
+              
+              
+<p>
+  Categories:
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://wtzlas.github.io/categories/sui-bi/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-cube"></i>
+      </span>
+      <span>随笔</span>
+    </span>
+  </a>
+  
+</p>
+
+              
+            </div>
+            <div class="column has-text-right-desktop">
+              
+              
+<p>
+  Tags:
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://wtzlas.github.io/tags/an-zhuang/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>安装</span>
+    </span>
+  </a>
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://wtzlas.github.io/tags/arch-linux/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>Arch Linux</span>
+    </span>
+  </a>
+  
+</p>
+
+              
+            </div>
+          </div>
+          <div class="content mt-2">
+            <h1 id="zhun-bei">准备</h1>
+<p>这部分的工作与ArchWiki上的<a href="https://wiki.archlinux.org/title/Installation_guide#Pre-installation">Installation Guide第一部分</a>大同小异，熟悉的读者大概可以跳过（？🤔）。</p>
+<h2 id="zhun-bei-archisohuan-jing">准备ArchISO环境</h2>
+<p>由于众所周知的原因，最好从镜像站下载ISO文件。这里推荐从<a href="https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/">清华大学开源软件镜像站</a>下载。</p>
+<p>下载完成后，Windows下用<a href="https://rufus.ie/">Rufus</a>刻录到U盘中。</p>
+<p>Linux下使用cp或者cat写入。</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># cp path/to/archlinux-version-x86_64.iso /dev/sdx
+</span></code></pre>
+<p>然后启动到ArchISO环境即可。</p>
+<h2 id="lian-wang">联网</h2>
+<p>如果是有线连接（使用DHCP）这时候systemd-networkd应该已经搞定了，如果是无线网络还需要使用iwctl连接。</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># iwctl
+</span><span style="color:#abb2bf;">[iwd]# station wlan0 scan
+</span><span style="color:#abb2bf;">[iwd]# station wlan0 get-networks
+</span><span style="color:#abb2bf;">[iwd]# station wlan0 connect &lt;YOUR_NETWORK_SSID&gt;
+</span></code></pre>
+<p>连接完成后用ping测试一下确保网络通畅。</p>
+<h2 id="she-zhi-pacmanjing-xiang">设置pacman镜像</h2>
+<p><a href="https://wiki.archlinux.org/title/Reflector">reflector</a>是用来自动更新<code>/etc/pacman.d/mirrorlist</code>的Python脚本，在网络上线后会立刻由systemd执行，但是默认的配置过于铸币😠，因此联网之后直接先关闭它。然后执行我们优化过的方案。</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># systemctl stop reflector
+</span><span style="color:#abb2bf;"># reflector -c china -f 5 --sort score --save /etc/pacman.d/mirrorlist
+</span></code></pre>
+<h2 id="she-zhi-pacman">设置pacman</h2>
+<p>修改<code>/etc/pacman.conf</code>，取消<code>Color</code>和<code>ParallelDownload=5</code>前的注释，这样你的pacman就有色彩和并行下载了。</p>
+<h2 id="geng-xin-shi-zhong">更新时钟</h2>
+<p>没啥好说的，更就完事了。</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># timedatectl set-ntp true
+</span></code></pre>
+<h2 id="fen-qu-ge-shi-hua-he-chu-bu-gua-zai">分区，格式化和初步挂载</h2>
+<p>参考布局：</p>
+<table><thead><tr><th>挂载点</th><th>分区</th><th>分区类型</th><th>文件系统类型</th><th align="left">建议大小</th></tr></thead><tbody>
+<tr><td><code>/mnt/efi</code></td><td><code>/dev/esp</code></td><td><a href="https://en.wikipedia.org/wiki/EFI_system_partition">EFI system partition</a></td><td>FAT32</td><td align="left">512MiB</td></tr>
+<tr><td><code>/mnt</code>,<code>/mnt/swap</code>,<code>/mnt/var</code></td><td><code>/dev/root_part</code></td><td>Linux filesystem</td><td>btrfs</td><td align="left">剩余空间</td></tr>
+</tbody></table>
+<p>参考 btrfs 挂载参数：</p>
+<p><code>compress=zstd,space_cache=v2,ssd,noatime</code></p>
+<p>关于btrfs的挂载参数和chattr可参考<a href="https://man.archlinux.org/man/btrfs.5#MOUNT_OPTIONS">其manual中的说明</a>和<a href="https://wiki.archlinux.org/title/Btrfs#Disabling_CoW">ArchWiki中的相关介绍</a>。</p>
+<p>随后进行格式化和初步挂载：</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># mkfs.fat -F 32 /dev/esp
+</span><span style="color:#abb2bf;"># mkfs.btrfs /dev/root_part
+</span><span style="color:#abb2bf;"># mount /dev/root_part /mnt -o &lt;MOUNT_OPTIONS&gt;
+</span><span style="color:#abb2bf;"># mkdir /mnt/var
+</span><span style="color:#abb2bf;"># chattr +C /mnt/var
+</span><span style="color:#abb2bf;"># mount /dev/esp /mnt/boot
+</span></code></pre>
+<p>如果与Windows装双系统，请务必先安装Windows，然后将Windows建立的ESP直接挂载到<code>/mnt/efi</code>，不可再次格式化。</p>
+<h2 id="jian-li-swapfile">建立swapfile</h2>
+<p>参考<a href="https://wiki.archlinux.org/title/Btrfs#Swap_file">ArchWiki中的相关说明</a>。</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># cd /mnt
+</span><span style="color:#abb2bf;"># touch swapfile
+</span><span style="color:#abb2bf;"># truncate -s 0 ./swapfile
+</span><span style="color:#abb2bf;"># chattr +C ./swapfile
+</span><span style="color:#abb2bf;"># btrfs property set ./swapfile compression none
+</span><span style="color:#abb2bf;"># dd if=/dev/zero of=./swapfile bs=1M count=&lt;YOUR_INTENTED_SWAP_SPACE&gt; status=progress
+</span><span style="color:#abb2bf;"># chmod 600 ./swapfile
+</span><span style="color:#abb2bf;"># mkswap ./swapfile
+</span><span style="color:#abb2bf;"># swapon ./swapfile
+</span></code></pre>
+<h1 id="an-zhuang-yu-chu-bu-pei-zhi">安装与初步配置</h1>
+<h2 id="an-zhuang-bi-yao-bao">安装必要包</h2>
+<table><thead><tr><th>包名</th><th>备注</th></tr></thead><tbody>
+<tr><td>base</td><td>-</td></tr>
+<tr><td>base-devel</td><td>AUR</td></tr>
+<tr><td>linux-firmware</td><td>-</td></tr>
+<tr><td>btrfs-progs</td><td>-</td></tr>
+<tr><td>nano</td><td>喜欢vim的可以换成vim</td></tr>
+<tr><td>man-db, man-pages, texinfo</td><td>-</td></tr>
+<tr><td>iwd</td><td>使用无线网络</td></tr>
+<tr><td>git</td><td>-</td></tr>
+<tr><td>zsh</td><td>-</td></tr>
+<tr><td>grub, dosfstools, efibootmgr, os-prober</td><td>-</td></tr>
+</tbody></table>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">pacstrap /mnt base base-devel linux-firmware btrfs-progs nano man-db man-pages texinfo iwd git zsh grub dosfstools efibootmgr os-prober
+</span></code></pre>
+<h2 id="sheng-cheng-etc-fstab">生成<code>/etc/fstab</code></h2>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</span></code></pre>
+<p>记得检查下<code>/etc/fstab</code>里的挂载选项，有时候会丢。</p>
+<h2 id="fu-zhi-wu-xian-wang-luo-pei-zhi">复制无线网络配置</h2>
+<p>你不会想再来一遍的。</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># mkdir -p /mnt/var/lib/iwd
+</span><span style="color:#abb2bf;"># cp /var/lib/iwd/* /mnt/var/lib/iwd
+</span></code></pre>
+<h2 id="chroot">chroot</h2>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># arch-chroot /mnt
+</span></code></pre>
+<h2 id="shi-qu-pei-zhi">时区配置</h2>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</span><span style="color:#abb2bf;"># hwclock --systohc
+</span></code></pre>
+<h2 id="ben-di-hua">本地化</h2>
+<p>修改<code>/etc/locale.gen</code> ，取消<code>en_US.UTF-8 UTF-8</code>和<code>zh_CN.UTF-8 UTF-8</code>的注释。</p>
+<p>然后运行locale-gen，设置成英文（推荐在安装图形界面之前使用英文）。</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># locale-gen
+</span><span style="color:#abb2bf;"># echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
+</span></code></pre>
+<h2 id="pei-zhi-wang-luo">配置网络</h2>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># echo &lt;YOUR_HOSTNAME&gt; &gt; /etc/hostname
+</span></code></pre>
+<p>看起来systemd帮你搞定本地主机名解析啦😆，🤔就不用改<code>/etc/hosts</code>了。</p>
+<p>然后在<code>/etc/systemd/network/</code>下新建<code>20-wired.network</code>和<code>25-wireless.network</code>。</p>
+<p>这里只配置了DHCP网络需要的内容，特殊需求请自行查阅ArchWiki。</p>
+<p><code>20-wired.network</code>加入以下内容：</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">[Match]
+</span><span style="color:#abb2bf;">Name=en*
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">[Network]
+</span><span style="color:#abb2bf;">DHCP=yes
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">[DHCPv4]
+</span><span style="color:#abb2bf;">RouteMetric=10
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">[IPv6AcceptRA]
+</span><span style="color:#abb2bf;">RouteMetric=10
+</span></code></pre>
+<p><code>25-wireless.network</code>加入以下内容：</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">[Match]
+</span><span style="color:#abb2bf;">Name=wlan*
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">[Network]
+</span><span style="color:#abb2bf;">DHCP=yes
+</span><span style="color:#abb2bf;">IgnoreCarrierLoss=3s
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">[DHCPv4]
+</span><span style="color:#abb2bf;">RouteMetric=20
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">[IPv6AcceptRA]
+</span><span style="color:#abb2bf;">RouteMetric=20
+</span></code></pre>
+<p>随后执行：</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># systemctl enable iwd
+</span><span style="color:#abb2bf;"># systemctl enable systemd-networkd
+</span></code></pre>
+<h2 id="bian-yi-linux-xanmod-nei-he">编译 linux-xanmod 内核</h2>
+<p>这是一个比较难的步骤（各种意义上），跟紧了！</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># git clone https://aur.archlinux.org/linux-xanmod.git
+</span><span style="color:#abb2bf;"># cd linux-xanmod
+</span><span style="color:#abb2bf;"># nano PKGBUILD
+</span></code></pre>
+<p>然后在 nano 中修改 PKGBUILD 上方的选项。</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># makepkg -si
+</span></code></pre>
+<h2 id="qi-dong-fstrim">启动 fstrim</h2>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># systemctl enable fstrim.timer
+</span></code></pre>
+<h2 id="she-zhi-rootmi-ma">设置root密码</h2>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># passwd
+</span></code></pre>
+<p>球球大伙别123456了。再用我就：👊👊👊</p>
+<h2 id="an-zhuang-cpuwei-ma">安装CPU微码</h2>
+<p>下面这俩安一个就行了。</p>
+<p>（可移动介质安装除外，这俩都得装。）</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># pacman -S amd-ucode
+</span></code></pre>
+<p>或者</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># pacman -S intel-ucode
+</span></code></pre>
+<h2 id="she-zhi-yin-dao">设置引导</h2>
+<p>修改<code>/etc/default/grub</code>，添加<code>GRUB_DISABLE_OS_PROBER=false</code>来启动grub的os-prober功能。</p>
+<p>将原有的默认内核参数清空，并填入<code>acpi_backlight=vendor</code>来解决部分笔记本屏幕亮度保存失败的问题，有动手能力者可以尝试<a href="https://github.com/FedeDP/Clight">clight</a>。</p>
+<p>没人会想去手写grub的配置文件的。😢</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+</span></code></pre>
+<p>可移动介质还请加入<code>--removable --recheck</code>。</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># grub-mkconfig -o /boot/grub/grub.cfg
+</span></code></pre>
+<h2 id="zhong-qi">重启</h2>
+<p>行了，你的Arch已经能自己动了，记得把安装介质拔出去。（？</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># reboot
+</span></code></pre>
+<h2 id="pei-zhi-wang-luo-di-er-bu-fen">配置网络（第二部分）</h2>
+<p>不能忘了systemd-resolved啊！</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># systemctl enable systemd-resolved
+</span><span style="color:#abb2bf;"># systemctl start systemd-resolved
+</span><span style="color:#abb2bf;"># ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+</span></code></pre>
+<h2 id="tian-jia-yong-hu">添加用户</h2>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># useradd -m -G wheel -s /bin/zsh &lt;USERNAME&gt;
+</span><span style="color:#abb2bf;"># passwd &lt;USERNAME&gt;
+</span></code></pre>
+<h2 id="she-zhi-sudoer">设置sudoer</h2>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">EDITOR=nano visudo
+</span></code></pre>
+<p>使用vim的请换成<code>EDTIOR=vim</code>。</p>
+<h1 id="an-zhuang-tu-xing-hua-jie-mian">安装图形化界面</h1>
+<p>马上就是最后一步啦~🙌</p>
+<p>鉴于GNOME对Fractional Scaling的支持非常难以言喻，HiDPI屏幕可以战略性放弃GNOME了。</p>
+<p>当然是用香香的KDE啦~😆</p>
+<h2 id="an-zhuang-xian-qia-qu-dong">安装显卡驱动</h2>
+<p>参考<a href="https://wiki.archlinux.org/title/Xorg#Driver_installation">ArchWiki上关于显卡驱动的介绍</a>。</p>
+<p>这里安装xf86-video-amdgpu和nvidia-dkms，（<a href="https://wiki.archlinux.org/title/Dynamic_Kernel_Module_Support">关于DKMS的介绍</a>）。</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># sudo pacman -S xf86-video-amdgpu nvidia-dkms libva-mesa-driver mesa-vdpau
+</span></code></pre>
+<h2 id="an-zhuang-zi-ti">安装字体</h2>
+<p>很喜欢 ttf-liberation 的英文。</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># sudo pacman -S noto-fonts-cjk noto-fonts-emoji ttf-liberation
+</span></code></pre>
+<h2 id="yin-pin-she-zhi">音频设置</h2>
+<p><a href="https://pipewire.org/">pipewire</a> 是最新一代的Linux音频技术，用就完事了！</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># paru -S pipewire pipewire-pulse pipewire-jack pipewire-alsa gst-plugin-pipewire
+</span></code></pre>
+<p>有冲突包一律卸载，pipewire会接替这些包的位置。</p>
+<h2 id="an-zhuang-kdehe-bu-fen-ying-yong">安装KDE和部分应用</h2>
+<p>精挑细选，把一堆游戏都删掉了。挑几个重点说说。</p>
+<table><thead><tr><th>包名</th><th>备注</th></tr></thead><tbody>
+<tr><td>ark</td><td>WinRAR</td></tr>
+<tr><td>dolphin</td><td>Explorer</td></tr>
+<tr><td>vlc</td><td>PotPlayer</td></tr>
+<tr><td>flameshot</td><td>Snipaste</td></tr>
+<tr><td>gwenview</td><td>AcdSee</td></tr>
+<tr><td>kcalc</td><td>Calc, but MUCH MORE shabby</td></tr>
+<tr><td>kate</td><td>Notepad, but more advanced</td></tr>
+<tr><td>konsole</td><td>cmd</td></tr>
+<tr><td>okular</td><td>Adobe Acrobat</td></tr>
+</tbody></table>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># sudo pacman -S plasma-meta ark dolphin dolphin-plugins vlc
+</span><span style="color:#abb2bf;">flameshot gwenview kalarm kcalc kate kcron kdeconnect
+</span><span style="color:#abb2bf;">kdegraphics-thumbnailers kdenetwork-filesharing kdepim-addons
+</span><span style="color:#abb2bf;">kdesdk-kioslaves kdesdk-thumbnailers kdf kdialog kfind kio-extras
+</span><span style="color:#abb2bf;">kmag konsole korganizer ksystemlog kwalletmanager okular
+</span><span style="color:#abb2bf;">pim-data-exporter pim-sieve-editor print-manager signon-kwallet-extension
+</span><span style="color:#abb2bf;">yakuake zeroconf-ioslave
+</span></code></pre>
+<h2 id="pei-zhi-sddm">配置SDDM</h2>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># systemctl enable sddm
+</span></code></pre>
+<h1 id="jin-jie-she-zhi">进阶设置</h1>
+<h2 id="an-zhuang-shu-ru-fa">安装输入法</h2>
+<p>这里使用无敌的fcitx5 + rime。</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># sudo pacman -S fcitx5-im fcitx5-rime
+</span></code></pre>
+<p>修改<code>/etc/environment</code>加入以下内容：</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">GTK_IM_MODULE=fcitx
+</span><span style="color:#abb2bf;">QT_IM_MODULE=fcitx
+</span><span style="color:#abb2bf;">XMODIFIERS=@im=fcitx
+</span><span style="color:#abb2bf;">SDL_IM_MODULE=fcitx
+</span></code></pre>
+<h2 id="aur-helper">AUR Helper</h2>
+<p>我是Rust铁粉所以我用paru。</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># git clone https://aur.archlinux.org/paru.git
+</span><span style="color:#abb2bf;"># cd paru
+</span><span style="color:#abb2bf;"># makepkg -si
+</span><span style="color:#abb2bf;"># cd ..
+</span><span style="color:#abb2bf;"># rm -rf paru
+</span></code></pre>
+<p>从此之后就可以丢掉pacman了。（雾）</p>
+<h2 id="systemd-networkd-ji-cheng">systemd-networkd 集成</h2>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># paru -S networkd-notify-git
+</span></code></pre>
+<h2 id="fcitx5pi-fu">fcitx5皮肤</h2>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># paru -S fcitx5-breeze
+</span></code></pre>
+<p>接着在fcitx5的配置工具中切换皮肤。</p>
+<h2 id="pei-zhi-zsh">配置zsh</h2>
+<p>为了让zsh更好看更好用，oh-my-zsh是必需的啦~</p>
+<p>先安装一个Nerd Font字体以支持奇怪符号。</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># paru -S nerd-fonts-meslo
+</span></code></pre>
+<p>然后修改konsole配置使用MesloLGS Nerd Font Mono字体。</p>
+<p>这里使用antigen来做zsh的包管理。</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># paru -S antigen
+</span></code></pre>
+<p>修改<code>~/.zshrc</code>，加入以下内容：</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">source /usr/share/zsh/share/antigen.zsh
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">antigen use oh-my-zsh
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">antigen bundle sudo
+</span><span style="color:#abb2bf;">antigen bundle zdharma-continuum/fast-syntax-highlighting
+</span><span style="color:#abb2bf;">antigen bundle zsh-users/zsh-autosuggestions
+</span><span style="color:#abb2bf;">antigen bundle zsh-users/zsh-completions
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">antigen theme romkatv/powerlevel10k
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">antigen apply
+</span></code></pre>
+<p>随后：</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;"># proxychains zsh
+</span></code></pre>
+<p>然后你的zsh就有炫酷的语法高亮、自动建议和prompt啦~</p>
+<h2 id="ben-di-hua-di-er-bu-fen">本地化（第二部分）</h2>
+<p>如果你发现本地化还有问题，请先在KDE的系统设置里设置，然后执行：</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">sudo localectl set-locale LANG=zh_CN.UTF-8
+</span></code></pre>
+<h1 id="wei-sheng">尾声</h1>
+<p>到这里你的Arch已经基本完成，图形化界面都有，开始你的愉快新生活吧~</p>
+
+          </div>
+        </article>
+      </div>
+      
+      <div class="column is-2 is-hidden-mobile">
+        <aside class="menu" style="position: sticky; top: 48px">
+          <p class="heading has-text-weight-bold">Contents</p>
+          <ul class="menu-list">
+            
+            <li>
+              <a id="link-zhun-bei" class="toc is-size-7 is-active"
+                href="https://wtzlas.github.io/posts/arch-linux-installation/#zhun-bei">
+                准备
+              </a>
+              
+              <ul>
+                
+                <li>
+                  <a id="link-zhun-bei-archisohuan-jing" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#zhun-bei-archisohuan-jing">
+                    准备ArchISO环境
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-lian-wang" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#lian-wang">
+                    联网
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-she-zhi-pacmanjing-xiang" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#she-zhi-pacmanjing-xiang">
+                    设置pacman镜像
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-she-zhi-pacman" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#she-zhi-pacman">
+                    设置pacman
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-geng-xin-shi-zhong" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#geng-xin-shi-zhong">
+                    更新时钟
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-fen-qu-ge-shi-hua-he-chu-bu-gua-zai" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#fen-qu-ge-shi-hua-he-chu-bu-gua-zai">
+                    分区，格式化和初步挂载
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-jian-li-swapfile" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#jian-li-swapfile">
+                    建立swapfile
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a id="link-an-zhuang-yu-chu-bu-pei-zhi" class="toc is-size-7 "
+                href="https://wtzlas.github.io/posts/arch-linux-installation/#an-zhuang-yu-chu-bu-pei-zhi">
+                安装与初步配置
+              </a>
+              
+              <ul>
+                
+                <li>
+                  <a id="link-an-zhuang-bi-yao-bao" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#an-zhuang-bi-yao-bao">
+                    安装必要包
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-sheng-cheng-etc-fstab" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#sheng-cheng-etc-fstab">
+                    生成&#x2F;etc&#x2F;fstab
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-fu-zhi-wu-xian-wang-luo-pei-zhi" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#fu-zhi-wu-xian-wang-luo-pei-zhi">
+                    复制无线网络配置
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-chroot" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#chroot">
+                    chroot
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-shi-qu-pei-zhi" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#shi-qu-pei-zhi">
+                    时区配置
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-ben-di-hua" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#ben-di-hua">
+                    本地化
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-pei-zhi-wang-luo" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#pei-zhi-wang-luo">
+                    配置网络
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-bian-yi-linux-xanmod-nei-he" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#bian-yi-linux-xanmod-nei-he">
+                    编译 linux-xanmod 内核
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-qi-dong-fstrim" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#qi-dong-fstrim">
+                    启动 fstrim
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-she-zhi-rootmi-ma" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#she-zhi-rootmi-ma">
+                    设置root密码
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-an-zhuang-cpuwei-ma" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#an-zhuang-cpuwei-ma">
+                    安装CPU微码
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-she-zhi-yin-dao" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#she-zhi-yin-dao">
+                    设置引导
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-zhong-qi" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#zhong-qi">
+                    重启
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-pei-zhi-wang-luo-di-er-bu-fen" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#pei-zhi-wang-luo-di-er-bu-fen">
+                    配置网络（第二部分）
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-tian-jia-yong-hu" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#tian-jia-yong-hu">
+                    添加用户
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-she-zhi-sudoer" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#she-zhi-sudoer">
+                    设置sudoer
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a id="link-an-zhuang-tu-xing-hua-jie-mian" class="toc is-size-7 "
+                href="https://wtzlas.github.io/posts/arch-linux-installation/#an-zhuang-tu-xing-hua-jie-mian">
+                安装图形化界面
+              </a>
+              
+              <ul>
+                
+                <li>
+                  <a id="link-an-zhuang-xian-qia-qu-dong" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#an-zhuang-xian-qia-qu-dong">
+                    安装显卡驱动
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-an-zhuang-zi-ti" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#an-zhuang-zi-ti">
+                    安装字体
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-yin-pin-she-zhi" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#yin-pin-she-zhi">
+                    音频设置
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-an-zhuang-kdehe-bu-fen-ying-yong" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#an-zhuang-kdehe-bu-fen-ying-yong">
+                    安装KDE和部分应用
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-pei-zhi-sddm" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#pei-zhi-sddm">
+                    配置SDDM
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a id="link-jin-jie-she-zhi" class="toc is-size-7 "
+                href="https://wtzlas.github.io/posts/arch-linux-installation/#jin-jie-she-zhi">
+                进阶设置
+              </a>
+              
+              <ul>
+                
+                <li>
+                  <a id="link-an-zhuang-shu-ru-fa" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#an-zhuang-shu-ru-fa">
+                    安装输入法
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-aur-helper" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#aur-helper">
+                    AUR Helper
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-systemd-networkd-ji-cheng" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#systemd-networkd-ji-cheng">
+                    systemd-networkd 集成
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-fcitx5pi-fu" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#fcitx5pi-fu">
+                    fcitx5皮肤
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-pei-zhi-zsh" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#pei-zhi-zsh">
+                    配置zsh
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="link-ben-di-hua-di-er-bu-fen" class="toc is-size-7" href="https://wtzlas.github.io/posts/arch-linux-installation/#ben-di-hua-di-er-bu-fen">
+                    本地化（第二部分）
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li>
+              <a id="link-wei-sheng" class="toc is-size-7 "
+                href="https://wtzlas.github.io/posts/arch-linux-installation/#wei-sheng">
+                尾声
+              </a>
+              
+            </li>
+            
+          </ul>
+        </aside>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <nav class="level">
+          
+          <div class="level-item has-text-centered">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;wtzlas.github.io&#x2F;posts&#x2F;pairing-heap&#x2F;">
+              <span class="icon mr-2">
+                <i class="fas fa-arrow-circle-left"></i>
+              </span>
+              配对堆
+            </a>
+          </div>
+             
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
+
+
+
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://wtzlas.github.io/elasticlunr.min.js"></script>
+  <script src="https://wtzlas.github.io/search_index.en.js"></script><script src="https://wtzlas.github.io/js/site.js"></script>
+
+  
+
+<script type="text/javascript">
+  const menuBarHeight = document.querySelector("nav.navbar").clientHeight;
+  const tocItems = document.querySelectorAll(".toc");
+  const navSections = new Array(tocItems.length);
+
+  tocItems.forEach((el, i) => {
+    let id = el.getAttribute("id").substring(5);
+    navSections[i] = document.getElementById(id);
+  })
+
+  function isVisible(tocIndex) {
+    const current = navSections[tocIndex];
+    const next = tocIndex < tocItems.length - 1 ? navSections[tocIndex + 1]
+      : document.querySelectorAll("section.section").item(1);
+
+    const c = current.getBoundingClientRect();
+    const n = next.getBoundingClientRect();
+    const h = (window.innerHeight || document.documentElement.clientHeight);
+
+    return (c.top <= h) && (n.top - menuBarHeight >= 0);
+  }
+
+  function activateIfVisible() {
+    for (b = true, i = 0; i < tocItems.length; i++) {
+      if (b && isVisible(i)) {
+        tocItems[i].classList.add('is-active');
+        b = false;
+      } else
+        tocItems[i].classList.remove('is-active');
+    }
+  }
+
+  var isTicking = null;
+  window.addEventListener('scroll', () => {
+    if (!isTicking) {
+      window.requestAnimationFrame(() => {
+        activateIfVisible();
+        isTicking = false;
+      });
+      isTicking = true;
+    }
+  }, false);
+</script>
+
+
+
+
+
+  
+  
+</body>
+
+</html>
